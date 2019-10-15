@@ -45,7 +45,9 @@ public final class Transaction {
 
 		Transaction that = (Transaction) o;
 
-		return amount.equals(that.amount) && fromAccountId.equals(that.fromAccountId) && toAccountId.equals(that.toAccountId);
+		return amount.equals(that.amount)
+				&& fromAccountId.equals(that.fromAccountId)
+				&& toAccountId.equals(that.toAccountId);
 
 	}
 
@@ -57,6 +59,9 @@ public final class Transaction {
 	@Override
 	public String toString() {
 		return format(
-		        "Transaction: to account %d from account %d, amount %s", toAccountId, fromAccountId, amount.toString());
+		        "Transaction: to account %d from account %d, amount %s",
+				toAccountId,
+				fromAccountId,
+				amount.toString());
 	}
 }

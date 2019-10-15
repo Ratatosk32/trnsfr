@@ -21,12 +21,14 @@ public class AccountDaoTest {
 	@Test
 	public void getAccountById_positive() throws TransferException {
 		Account account = dao.getAccountDao().getAccountById(1L);
+
 		assertEquals("test", account.getUserName());
 	}
 
 	@Test
 	public void getAccountById_negative() throws TransferException {
 		Account account = dao.getAccountDao().getAccountById(100L);
+
 		assertNull(account);
 	}
 

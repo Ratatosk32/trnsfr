@@ -7,7 +7,7 @@ import java.math.RoundingMode;
 public final class FormatterUtils {
 
     public static BigDecimal formatToBigDecimal(int value) {
-        return new BigDecimal(value).setScale(4, RoundingMode.HALF_EVEN);
+        return setHalfEvenRoundingMode(new BigDecimal(value));
     }
 
     public static BigDecimal setHalfEvenRoundingMode(BigDecimal value) {

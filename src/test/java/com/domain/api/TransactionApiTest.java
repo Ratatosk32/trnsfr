@@ -32,7 +32,7 @@ public class TransactionApiTest extends BaseApiTest {
     }
 
     @Test
-    public void testWithDrawSufficientFund() throws Exception {
+    public void testWithdraw_positive() throws Exception {
         HttpPut request = new HttpPut(builder.setPath("/account/2/withdraw/100").build());
         request.setHeader("Content-type", "application/json");
 
@@ -45,7 +45,7 @@ public class TransactionApiTest extends BaseApiTest {
     }
 
     @Test
-    public void testTransactionNotEnoughFund() throws Exception {
+    public void testTransaction_negative() throws Exception {
         URI uri = builder.setPath("/transaction").build();
         BigDecimal amount = formatToBigDecimal(100000);
         Transaction transaction = new Transaction(amount, 3L, 4L);

@@ -44,6 +44,5 @@ public class AccountBalanceTest {
 
 		assertEquals(accountFrom.getBalance(), formatToBigDecimal(0));
 		assertEquals(accountTo.getBalance(), formatToBigDecimal(200));
-
 	}
 }
